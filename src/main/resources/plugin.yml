@@ -1,0 +1,6 @@
+name: WildSkript
+version: '${project.version}'
+main: net.mtproject.rewildskript.ReWildSkript
+api-version: '1.13'
+authors: [Dzikoysk, Texider_]
+loadbefore: [Skript]
