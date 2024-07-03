@@ -5,23 +5,27 @@ import ch.njol.skript.SkriptAddon;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.IOException;
-
 public final class ReWildSkript extends JavaPlugin {
 
     private static ReWildSkript instance;
     private SkriptAddon addon;
 
     @Override
-    public void onEnable() {
+    public void onLoad() {
         instance = this;
-        addon = Skript.registerAddon(this);
+    }
+
+    @Override
+    public void onEnable() {
         try {
-            addon.loadClasses("net.mtproject.rewildskript", "elements");
-        } catch (IOException e) {
+            addon = Skript.registerAddon(this);
+            addon.loadClasses("net.mtproject.rewildskript", "Elements");
+            Bukkit.getLogger().info("[WildSkript] has been enabled!");
+        } catch (Exception e) {
+            Bukkit.getLogger().severe("[WildSkript] Failed to register Skript addon or load classes!");
             e.printStackTrace();
+            getServer().getPluginManager().disablePlugin(this);
         }
-        Bukkit.getLogger().info("[WildSkript] has been enabled!");
     }
 
     public static ReWildSkript getInstance() {

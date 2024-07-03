@@ -1,7 +1,5 @@
 package net.mtproject.rewildskript.Util;
 
-import net.mtproject.rewildskirpt.Util.ObfuscatorUtils;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

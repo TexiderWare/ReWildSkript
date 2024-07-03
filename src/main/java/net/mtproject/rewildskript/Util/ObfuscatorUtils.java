@@ -1,4 +1,4 @@
-package net.mtproject.rewildskirpt.Util;
+package net.mtproject.rewildskript.Util;
 
 import java.io.*;
 import java.util.Enumeration;
