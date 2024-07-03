@@ -4,8 +4,8 @@
   <groupId>net.mtproject</groupId>
   <artifactId>ReWildSkript</artifactId>
   <name>ReWildSkript</name>
-  <version>v0.1</version>
-  <description>WildSkript in Only Obf</description>
+  <version>1.8.4</version>
+  <description>WildScript but it's just the obfuscate system.</description>
   <url>www.mtproject.net</url>
   <build>
     <resources>
